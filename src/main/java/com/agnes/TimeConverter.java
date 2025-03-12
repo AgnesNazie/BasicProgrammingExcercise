@@ -3,6 +3,7 @@ package com.agnes;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 public class TimeConverter {
     public static void main(String[] args) {
@@ -67,5 +68,23 @@ public class TimeConverter {
         DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("HH:mm:ss");
         String formattedTime = currentTime.format(formatter1);
         System.out.println(formattedTime);
+
+        //exercise 13 create a localDateTime
+        LocalDateTime dateTime = LocalDateTime.of(2018,4,5,10,00);
+        System.out.println(dateTime);
+
+        //exercise 14 format LocalDateTime
+        DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("eeee d MMMM hh:mm" );
+        String formattedDate = dateTime.format(formatter2);
+        System.out.println(formattedDate);
+
+        //exercise 15 combine local date and local time
+        LocalDate date = LocalDate.of(2018, 4, 5);
+        LocalTime time = LocalTime.of(10, 0);
+        LocalDateTime dateTime1 = LocalDateTime.of(date,time);
+        System.out.println(dateTime);
+
+
+
     }
 }
