@@ -6,6 +6,7 @@ public class Main {
         Hello.main(args);
         ArithmeticOperations.main(args);
         Hello.StringMethods.main(args);
+        TimeConverter.main(args);
 
     }
 }
