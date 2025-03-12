@@ -16,7 +16,7 @@ public class TimeConverter {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE d MMMM");
         String formatterDate = today.format(formatter);
         System.out.println(formatterDate);
-        //output "wednesday 12 March
+        //output "wednesday 12 March"
 
         //exercise 3
         LocalDate lastMonday = today.with(DayOfWeek.MONDAY).minusWeeks(1);
@@ -70,21 +70,23 @@ public class TimeConverter {
         System.out.println(formattedTime);
 
         //exercise 13 create a localDateTime
-        LocalDateTime dateTime = LocalDateTime.of(2018,4,5,10,00);
+        LocalDateTime dateTime = LocalDateTime.of(2018, 4, 5, 10, 0);
         System.out.println(dateTime);
 
         //exercise 14 format LocalDateTime
-        DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("eeee d MMMM hh:mm" );
+        DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("eeee d MMMM hh:mm");
         String formattedDate = dateTime.format(formatter2);
         System.out.println(formattedDate);
 
         //exercise 15 combine local date and local time
         LocalDate date = LocalDate.of(2018, 4, 5);
         LocalTime time = LocalTime.of(10, 0);
-        LocalDateTime dateTime1 = LocalDateTime.of(date,time);
-        System.out.println(dateTime);
+        LocalDateTime dateTime1 = LocalDateTime.of(date, time);
+        System.out.println(dateTime1);
 
-
+        //exercise 16extract local date and time form local datetime.
+        System.out.println("Date: " + date);
+        System.out.println("Time: " + time);
 
     }
 }
