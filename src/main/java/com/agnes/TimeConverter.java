@@ -2,6 +2,7 @@ package com.agnes;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.time.LocalTime;
 
 public class TimeConverter {
     public static void main(String[] args) {
@@ -53,6 +54,18 @@ public class TimeConverter {
         LocalTime currentTime = LocalTime.now();
         System.out.println(currentTime);
 
-        //exercise 10
+        //exercise 10 Extract Nanoseconds
+        int nanoseconds = currentTime.getNano();
+        System.out.println("Nanoseconds: " + nanoseconds);
+
+        //exercise 11 parse a localtime from a string
+        String timeString = "10:59:15";
+        LocalTime parsedTime = LocalTime.parse(timeString);
+        System.out.println(parsedTime);
+
+        //exercise 12 format current time
+        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("HH:mm:ss");
+        String formattedTime = currentTime.format(formatter1);
+        System.out.println(formattedTime);
     }
 }
