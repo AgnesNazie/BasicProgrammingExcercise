@@ -1,6 +1,7 @@
 package com.agnes;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.format.DateTimeFormatter;
 import java.time.DayOfWeek;
 
@@ -28,7 +29,16 @@ public class TimeConverter {
         System.out.println(parsedDate);
         // output 2025-03-11
 
-        //exercise 5
+        //exercise 5 find the day of the week
+        LocalDate birthday = LocalDate.of (1995,8,15);
+        DayOfWeek dayOfWeek = birthday.getDayOfWeek();
+        System.out.println(birthday + " "  + dayOfWeek);
+
+        //exercise 6
+        LocalDate  futureDate =LocalDate.now().plusYears(10).minusMonths(10);
+        Month month = futureDate.getMonth();
+        System.out.println("Future date: "  + futureDate);
+        System.out.println("Extracted month: "  + month);
 
     }
 }
