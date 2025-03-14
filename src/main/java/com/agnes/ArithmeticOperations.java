@@ -26,6 +26,12 @@ public class ArithmeticOperations {
         System.out.println(c);
         System.out.println(d);
 
+        // excercise 5
+        int firstNumber = 25;
+        int secondNumber = 5;
+        int product = firstNumber *secondNumber;
+        System.out.println(product);
+
     }
 
 }
