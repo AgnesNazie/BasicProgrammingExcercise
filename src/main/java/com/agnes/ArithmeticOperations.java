@@ -61,6 +61,11 @@ public class ArithmeticOperations {
         for (int i = 0; i < 10 ; i++) {
             System.out.println(numb + " x " + (i + 1) + " = " + (numb * (i + 1)));
         }
+        scanner.close();
+
+        // exercise 9. expression evaluation
+        System.out.println("============================");
+        System.out.println((25.5 * 3.5 - 3.5 * 3.5) / (40.5 - 4.5));
     }
 
 }
