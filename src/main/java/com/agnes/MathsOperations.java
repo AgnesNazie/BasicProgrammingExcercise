@@ -1,5 +1,7 @@
 package com.agnes;
 
+import java.util.Scanner;
+
 public class MathsOperations {
     public static void main ( String [] args) {
         // exercise 9. expression evaluation
@@ -20,6 +22,24 @@ public class MathsOperations {
         System.out.println("The Perimeters is " + perimeters);
         System.out.println("The area is " + area);
 
+        //exercise 12. Average of Three Numbers
+
+        Scanner scanner = new Scanner(System.in);
+
+        double number ;
+        System.out.println("Enter the first number");
+        number = scanner .nextDouble();
+        double number2 ;
+        System.out.println(" Enter the  second number");
+        number2 = scanner.nextDouble();
+        double number3;
+        System.out.println("Enter the third number");
+        number3 = scanner.nextDouble();
+        double sum = number + number2 + number3;
+        int count = 3;
+        double average = sum / count ;
+
+        System.out.println("The average of three number is " + average);
 
     }
 }
