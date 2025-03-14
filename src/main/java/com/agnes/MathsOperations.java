@@ -3,7 +3,7 @@ package com.agnes;
 import java.util.Scanner;
 
 public class MathsOperations {
-    public static void main ( String [] args) {
+    public static void main(String[] args) {
         // exercise 9. expression evaluation
 
         System.out.println("============================");
@@ -26,10 +26,10 @@ public class MathsOperations {
 
         Scanner scanner = new Scanner(System.in);
 
-        double number ;
+        double number;
         System.out.println("Enter the first number");
-        number = scanner .nextDouble();
-        double number2 ;
+        number = scanner.nextDouble();
+        double number2;
         System.out.println(" Enter the  second number");
         number2 = scanner.nextDouble();
         double number3;
@@ -37,9 +37,20 @@ public class MathsOperations {
         number3 = scanner.nextDouble();
         double sum = number + number2 + number3;
         int count = 3;
-        double average = sum / count ;
+        double average = sum / count;
 
         System.out.println("The average of three number is " + average);
+        scanner.close();
+        System.out.println("====================");
+
+        //exercise 13. Rectangle: Area and Perimeter
+        double width = 5.6;
+        double height = 8.5;
+       double  perimeter = 2 * (width + height);
+       double areas =  width * height;
+        System.out.println("The perimeter is " + perimeter);
+        System.out.println("The area is " + areas);
+
 
     }
 }
