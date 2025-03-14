@@ -1,5 +1,9 @@
 package com.agnes;
 
+import java.util.Scanner;
+
+import static java.util.Scanner.*;
+
 public class ArithmeticOperations {
     public static void main(String[] args) {
        //sum of two numbers 74,36
@@ -48,8 +52,15 @@ public class ArithmeticOperations {
         System.out.println("The div is : " + divide);
         System.out.println("The mod is : " + remainder);
 
+        // exercise 7
+        System.out.println("=========================");
 
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int numb = scanner.nextInt();
+        for (int i = 0; i < 10 ; i++) {
+            System.out.println(numb + " x " + (i + 1) + " = " + (numb * (i + 1)));
+        }
     }
 
 }
