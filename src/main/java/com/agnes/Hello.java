@@ -35,6 +35,17 @@ public class Hello {
         System.out.println("==============================================");
         System.out.println("==============================================");
 
+        // exercise 16. Face Printer
+
+        System.out.println("Print Face ");
+
+
+        System.out.println(" +\"\"\"\"\"+ ");
+        System.out.println("[| o o |]");
+        System.out.println(" |  ^  | ");
+        System.out.println(" | '-' | ");
+        System.out.println(" +-----+ ");
+
 
     }
 }
