@@ -4,8 +4,11 @@ import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalTime;
 import java.time.LocalDateTime;
+import java.time.format.TextStyle;
+import java.util.Locale;
 
 public class TimeConverter {
+
     public static void main(String[] args) {
         //exercise 1
         LocalDate today = LocalDate.now();
@@ -87,6 +90,34 @@ public class TimeConverter {
         //exercise 16extract local date and time form local datetime.
         System.out.println("Date: " + date);
         System.out.println("Time: " + time);
+
+        // Extra challenge (create calender)
+        Locale locale = Locale.ENGLISH;
+
+        for (int month1 = 1; month1 <= 12; month1++) {
+            LocalDate firstDay = LocalDate.of(2018, month, 1);
+            int daysInMonth = firstDay.lengthOfMonth();
+            DayOfWeek startDayOfWeek = firstDay.getDayOfWeek();
+            String monthName = firstDay.getMonth().getDisplayName(TextStyle.FULL, locale );
+            System.out.printf("\n%20s %d\n", monthName,2018);
+            System.out.println("Mon Tue Wed Thu Fri Sat Sun");
+
+            int startIndex = startDayOfWeek.getValue() % 7;
+
+            for (int i =0; i< startIndex; i++) {
+                System.out.println("  ");
+            }
+
+            for (int day = 1; day <= daysInMonth; day++) {
+                System.out.printf("%3d ",day);
+                if ((startIndex + day) % 7 == 0 ||  day == daysInMonth) {
+                    System.out.println();
+                }
+
+            }
+
+
+        }
 
     }
 }
